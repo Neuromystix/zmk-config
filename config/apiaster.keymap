@@ -14,14 +14,6 @@
 #define THUMBS_R 47 48 49
 
 / {    
-    macros {
-        wasdt: wasd_type {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &tog WASD &tog WASD_TYPE>;
-        };
-    };
 
     behaviors {
         hl: home_row_hold_tap_left {
