@@ -62,7 +62,7 @@
 //                                   | LOWER  | SPACE | TAB |  | DEL |BACK | RAISE  | 
             bindings = <
           &mt EXCL N1 &mt AT N2  &mt HASH N3   	&mt DLLR N4 &mt PRCNT N5              &mt AMPS N6 &mt LBRC N7   &mt LPAR N8  	&mt RPAR N9   	 &mt RBRC N0
-          &mt APOS Q  &mt DQT W  &mt PT_EURO E  &kp R       &kp T                     &mt BSLH Y  &mt FSLH U    &kp LBKT I    	&kp RBKT O    	 &mt EXCL P
+          &mt APOS Q  &mt DQT W  &mt PT_EURO E  &kp R       &kp T                     &mt BSLH Y  &mt FSLH U    &mt LBKT I    	&mt RBKT O    	 &mt EXCL P
 &kp ESC   &hl LALT A  &hl LGUI S &hl LSHFT D 	&hl LCTRL F &kp G                     &mt PIPE H  &hr RCTRL J 	&hr RSHFT K		&hr RGUI L 		 &hr RALT PT_C_CEDILLA  &kp ENTER
 &mt GT LT &kp Z       &kp X      &kp C       	&kp V       &kp B                     &kp N       &kp M       	&mt SEMI COMMA 	&mt COLON DOT  	 &mt UNDER MINUS    	&mt CARET TILDE
 												&mo LOWER   &kp SPACE &kp TAB &kp DEL &kp BSPC  &mo RAISE
