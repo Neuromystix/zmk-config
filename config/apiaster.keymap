@@ -47,9 +47,10 @@
             bindings = <&sys_reset>, <&bootloader>;
         };
 		
-		&mt {
-			tapping-term-ms = <300>; //  200 This is the value already set by default
-		};
+		// TO TEST adjust the mod tap settings
+		//&mt {
+		//	tapping-term-ms = <300>; //  200 This is the value already set by default
+		//};
 
 
     };
