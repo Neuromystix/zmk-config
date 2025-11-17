@@ -6,8 +6,7 @@
 #define QWERTY 0
 #define LOWER 1
 #define RAISE 2
-#define KEYPAD 3
-#define TESTPAD 4
+#define TESTPAD 3
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34 35 36 37
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 38 39 40 41 42 43
@@ -47,6 +46,12 @@
             tapping-term-ms = <200>;
             bindings = <&sys_reset>, <&bootloader>;
         };
+		
+		&mt {
+			tapping-term-ms = <300>; //  200 This is the value already set by default
+		};
+
+
     };
 
     keymap {
@@ -56,15 +61,15 @@
             display-name = "qwerty";
 // ------------------------------------------------------------------------------------------------------------
 //         |   1 ! |   2 @ |    3 #  |   4 $  |   5 % |              | 6 & |   7 {  |    8 (  |   9 ) |   0 } |       
-//         |   Q ' |   W " |    E €  |   R    |   T   |              | Y \ |   U /  |    I [  |   O ] |   P ? |        
-// |  ESC  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              | H | | CTRL/J | SHIFT/K | GUI/L | ALT/Ç | ENTER |
-// |  < >  |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    , ;  |  . :  |  -  _ |   ~ ^ |
+//         |   Q ' |   W " |    E €  |   R    |   T ´ |              | Y \ |   U /  |    I [  |   O ] |   P ? |        
+// |  ESC  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G ` |              | H | | CTRL/J | SHIFT/K | GUI/L | ALT/Ç | ENTER |
+// |  < >  |   Z ª |   X º |    C    |   V    |   B   |              |  N  |   M =  |    , ;  |  . :  |  -  _ |   ~ ^ |
 //                                   | LOWER  | SPACE | TAB |  | DEL |BACK | RAISE  | 
             bindings = <
           &mt EXCL N1   &mt PT_AT N2  &mt PT_HASH N3 &mt DLLR N4 &mt PRCNT N5             	&mt PT_AMPS N6 &mt PT_LBRC N7 &mt PT_LPAR N8    &mt PT_RPAR N9   	&mt PT_RBRC N0
-          &mt PT_APOS Q &mt PT_DQT W  &mt PT_EURO E  &kp R       &kp T                    	&mt PT_BSLH Y  &mt PT_FSLH U  &mt PT_LBKT I     &mt PT_RBKT O    	&mt PT_EXCL P
-&kp ESC   &hl LALT A    &hl LGUI S    &hl LSHFT D 	 &hl LCTRL F &kp G                   	&mt PT_PIPE H  &hr RCTRL J    &hr RSHFT K		  &hr RGUI L 		&hr RALT PT_C_CEDILLA  &kp ENTER
-&mt GT LT &mt PT_ORDF Z &mt PT_ORDM X &kp C       	 &kp V       &kp B                   	&kp N          &kp M          &mt PT_SEMI COMMA &mt PT_COLON DOT  &mt PT_UNDER PT_MINUS  &mt PT_CARET PT_TILDE
+          &mt PT_APOS Q &mt PT_DQT W  &mt PT_EURO E  &kp R       &mt PT_ACUTE T            	&mt PT_BSLH Y  &mt PT_FSLH U  &mt PT_LBKT I     &mt PT_RBKT O    	&mt PT_EXCL P
+&kp ESC   &hl LALT A    &hl LGUI S    &hl LSHFT D 	 &hl LCTRL F &mt PT_GRAVE G                   	&mt PT_PIPE H  &hr RCTRL J    &hr RSHFT K		  &hr RGUI L 		&hr RALT PT_C_CEDILLA  &kp ENTER
+&mt GT LT &mt PT_ORDF Z &mt PT_ORDM X &kp C       	 &kp V       &kp B                   	&kp N          &mt PT_EQUAL M &mt PT_SEMI COMMA &mt PT_COLON DOT  &mt PT_UNDER PT_MINUS  &mt PT_CARET PT_TILDE
 												     &mo LOWER   &kp SPACE &kp TAB  &kp DEL &kp BSPC       &mo RAISE
             >;
         };
@@ -75,54 +80,37 @@
 // ------------------------------------------------------------------------------------------------------------
 //         |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7  |  F8  |  F9  |  F10  |       
 //         |     |  ^  |      |      |      |                   |      |  7   |   8  |   9  |  * /  |      
-// |       |  <- |  v  |  ->  |      |      |                   |      |  4   |   5  |   6  |   -   |  F11  |
+// |       |  <- |  v  |  ->  |      |      |                   |  =   |  4   |   5  |   6  |   -   |  F11  |
 // |       |     |     |      |      |      |                   |  0   |  1   |   2  |   3  |   +   |  F12  |
 //                            |      |      |    |         |  , |  .   |      |              
             bindings = <
          &kp F1        &kp F2      &kp F3         &kp F4         &kp F5                    		&kp F6        &kp F7         &kp F8      &kp F9     &kp F10   
          &trans        &kp UP      &trans         &kp N4         &kp N5                     	&kp N6        &kp PT_N7      &kp PT_N8   &kp PT_N9  &mt PT_FSLH PT_STAR     
-&trans   &kp LEFT      &kp DOWN    &kp RIGHT      &hl LCTRL DLLR &kp PRCNT                  	&trans        &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS    &kp F11
+&trans   &kp LEFT      &kp DOWN    &kp RIGHT      &hl LCTRL DLLR &kp PRCNT                  	&kp PT_EQUAL  &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS     &kp F11
 &trans   &trans        &trans      &trans         &kp LBRC       &kp RBRC                   	&kp PT_N0     &kp PT_N1      &kp PT_N2   &kp PT_N3  &kp PT_PLUS      &kp F12
                                                   &trans         &trans   &trans  &kp PT_COMMA  &kp PT_DOT    &trans     
             >;
         };
 
+
         raise_layer {
             display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
-//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-// |       |      | TESTPAD| QWERTY  | KEYPAD      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-//                                   |             |        |      |  |      |       |      |
+//         | MUTE | VOL-   |  VOL+   | BRI+        |  BRI-  |                 |PRNTSCR|      |       |  INS  |   HOME   | 
+//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                 |       |      |       |       |   PGUP   |       
+// | CAPS  |      |        |         |             | studio |                 |       |      |       |       |   PGDN   | off     |
+// | reset |      | TESTPAD| QWERTY  |             |        |                 |  boot |      |       | POWER |   END    | reset   |
+//                                   |             |        |      | | studio |       |      |
             bindings = <
-           &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp  C_BRI_DN                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 
-           &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT                   &kp PG_UP    &kp HOME     &kp UP       &kp END      &bt BT_CLR
-&sys_reset &kp CLCK   &kp INS      &kp PSCRN    &kp K_CMENU  &studio_unlock               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &soft_off   &sys_reset
-&trans     &trans     &tog TESTPAD &tog QWERTY  &to KEYPAD   &bootloader                  &bootloader  &trans       &trans       &trans       &kp C_PWR   &trans
-                                                &trans       &trans       &trans   &trans &trans       &trans 
+           &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_UP &kp  C_BRI_DN                &kp PSCRN    &trans       &trans       &kp INS      &kp HOME                 
+           &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT                   &trans       &trans       &trans       &trans       &kp PG_UP
+&kp CLCK   &trans     &trans       &trans       &trans       &studio_unlock               &trans       &trans       &trans       &kp K_CMENU  &kp PG_DN    &soft_off
+&sys_reset &trans     &tog TESTPAD &tog QWERTY  &trans       &trans                       &bootloader  &trans       &trans       &kp C_PWR    &kp END      &sys_reset
+                                                &trans       &trans &trans      &studio_unlock   &trans    &trans 
             >;
         };
 		
-		
-
-        keypad_layer {
-            display-name = "keypad";
-// ------------------------------------------------------------------------------------------------------------
-//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-// |       |      |        | QWERTY  | KEYPAD      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-//                                   |             |        |      |  |      |       |      |
-            bindings = <
-           &trans     &trans       &trans       &trans    	 &trans             	  &trans 	   &trans       &trans       &trans       &trans                
-           &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT         	  &kp PG_UP    &kp HOME     &kp UP       &kp END      &bt BT_CLR
-&sys_reset &kp CLCK   &kp INS      &kp PSCRN    &kp K_CMENU  &studio_unlock       	  &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &soft_off   &sys_reset
-&trans     &trans     &trans       &tog QWERTY  &to RAISE    &mt A B              	  &bootloader  &trans       &trans       &trans       &kp C_PWR   &trans
-                                                &trans       &trans   &trans   &trans &trans       &trans 
-            >;
-        };		
-		
+					
         testpad_layer {
             display-name = "testpad";
 // ------------------------------------------------------------------------------------------------------------
@@ -135,15 +123,12 @@
            &trans     &trans       &trans        &trans     &trans              	  &trans    &trans   &trans   &trans   &trans                
            &trans     &trans       &trans        &trans     &trans             		  &trans    &trans   &trans   &trans   &trans 
 &trans     &trans     &trans       &trans        &trans     &mt COMMA SEMI         	  &trans    &trans   &trans   &trans   &trans     &trans 
-&trans     &trans     &trans       &tog QWERTY   &to RAISE  &mt A B            		  &trans    &trans   &trans   &trans   &trans     &trans 
+&trans     &trans     &to LOWER    &tog QWERTY   &to RAISE  &mt A B            		  &trans    &trans   &trans   &trans   &trans     &trans 
                                                  &trans     &trans   &trans   &trans  &trans    &trans 
             >;
         };	
 		
 		
-		
-		
-
 		
         extra1 {
             status = "reserved";
