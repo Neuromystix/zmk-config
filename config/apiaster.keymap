@@ -80,15 +80,15 @@
             display-name = "lower";
 // ------------------------------------------------------------------------------------------------------------
 //         |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7  |  F8  |  F9  |  F10  |       
-//         |     |  ^  |      |      |      |                   |      |  7   |   8  |   9  |  * /  |      
+//         |     |  ^  |      |      |      |                   |  =   |  7   |   8  |   9  |  * /  |      
 // |       |  <- |  v  |  ->  |      |      |                   |  =   |  4   |   5  |   6  |   -   |  F11  |
 // |       |     |     |      |      |      |                   |  0   |  1   |   2  |   3  |   +   |  F12  |
 //                            |      |      |    |         |  , |  .   |      |              
             bindings = <
          &kp F1        &kp F2      &kp F3         &kp F4         &kp F5                    		&kp F6        &kp F7         &kp F8      &kp F9     &kp F10   
-         &trans        &kp UP      &trans         &kp N4         &kp N5                     	&kp N6        &kp PT_N7      &kp PT_N8   &kp PT_N9  &mt PT_FSLH PT_STAR     
-&trans   &kp LEFT      &kp DOWN    &kp RIGHT      &hl LCTRL DLLR &kp PRCNT                  	&kp PT_EQUAL  &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS     &kp F11
-&trans   &trans        &trans      &trans         &kp LBRC       &kp RBRC                   	&kp PT_N0     &kp PT_N1      &kp PT_N2   &kp PT_N3  &kp PT_PLUS      &kp F12
+         &trans        &kp UP      &trans         &trans         &trans                     	&kp PT_EQUAL  &kp PT_N7      &kp PT_N8   &kp PT_N9  &mt PT_FSLH PT_STAR     
+&trans   &kp LEFT      &kp DOWN    &kp RIGHT      &trans   		 &trans                     	&kp PT_EQUAL  &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS     &kp F11
+&trans   &trans        &trans      &trans         &trans         &trans                   	&kp PT_N0     &kp PT_N1      &kp PT_N2   &kp PT_N3  &kp PT_PLUS      &kp F12
                                                   &trans         &trans   &trans  &kp PT_COMMA  &kp PT_DOT    &trans     
             >;
         };
@@ -103,7 +103,7 @@
 // | reset |      | TESTPAD| QWERTY  |             |        |                 |  boot |      |       | POWER |   END    | reset   |
 //                                   |             |        |      | | studio |       |      |
             bindings = <
-           &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_UP &kp  C_BRI_DN                &kp PSCRN    &trans       &trans       &kp INS      &kp HOME                 
+           &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_UP &kp C_BRI_DN                &kp PSCRN    &trans       &trans       &kp INS      &kp HOME                 
            &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT                   &trans       &trans       &trans       &trans       &kp PG_UP
 &kp CLCK   &trans     &trans       &trans       &trans       &studio_unlock               &trans       &trans       &trans       &kp K_CMENU  &kp PG_DN    &soft_off
 &sys_reset &trans     &tog TESTPAD &tog QWERTY  &trans       &trans                       &bootloader  &trans       &trans       &kp C_PWR    &kp END      &sys_reset
