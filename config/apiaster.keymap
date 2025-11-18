@@ -67,11 +67,11 @@
 // |  < >  |   Z ª |   X º |    C    |   V    |   B   |              |  N  |   M =  |    , ;  |  . :  |  -  _ |   ~ ^ |
 //                                   | LOWER  | SPACE | BACK |  | DEL|SPACE| RAISE  | 
             bindings = <
-				&mt EXCL N1   &mt PT_AT N2  &mt PT_HASH N3  &mt DLLR N4 &mt PRCNT N5             	&mt PT_AMPS N6 &mt PT_LBRC N7 &mt PT_LPAR N8    &mt PT_RPAR N9   	&mt PT_RBRC N0
-				&mt PT_APOS Q &mt PT_DQT W  &mt PT_EURO E   &kp R       &mt PT_ACUTE T            	&mt PT_BSLH Y  &mt PT_FSLH U  &mt PT_LBKT I     &mt PT_RBKT O    	&mt PT_EXCL P
-&mt TAB ESC   	&hl LALT A    &hl LGUI S    &hl LSHFT D 	&hl LCTRL F &mt PT_GRAVE G              &mt PT_PIPE H  &hr RCTRL J    &hr RSHFT K		&hr RGUI L 			&hr RALT PT_C_CEDILLA  &kp ENTER
-&mt PT_GT PT_LT &mt PT_ORDF Z &mt PT_ORDM X &kp C       	&kp V       &kp B                   	&kp N          &mt PT_EQUAL M &mt PT_SEMI COMMA &mt PT_COLON DOT  	&mt PT_UNDER PT_MINUS  &mt PT_CARET PT_TILDE
-															&mo LOWER   &kp SPACE &kp BSPC  &kp DEL &kp SPACE      &mo RAISE
+				&mt EXCL N1   &mt PT_AT N2  &mt PT_HASH N3  &mt DLLR N4 &mt PRCNT N5             		 &mt PT_AMPS N6 &mt PT_LBRC N7 &mt PT_LPAR N8    &mt PT_RPAR N9   	&mt PT_RBRC N0
+				&mt PT_APOS Q &mt PT_DQT W  &mt PT_EURO E   &kp R       &mt PT_ACUTE T            		 &mt PT_BSLH Y  &mt PT_FSLH U  &mt PT_LBKT I     &mt PT_RBKT O    	&mt PT_EXCL P
+&mt TAB ESC   	&hl LALT A    &hl LGUI S    &hl LSHFT D 	&hl LCTRL F &mt PT_GRAVE G              	 &mt PT_PIPE H  &hr RCTRL J    &hr RSHFT K		&hr RGUI L 			&hr RALT PT_C_CEDILLA  &kp ENTER
+&mt PT_GT PT_LT &mt PT_ORDF Z &mt PT_ORDM X &kp C       	&kp V       &kp B                   		 &kp N          &mt PT_EQUAL M &mt PT_SEMI COMMA &mt PT_COLON DOT  	&mt PT_UNDER PT_MINUS  &mt PT_CARET PT_TILDE
+															&mo LOWER   &kp SPACE &kp BSPC  &mt DEL BSPC &kp SPACE      &mo RAISE
             >;
         };
 
