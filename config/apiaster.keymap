@@ -93,7 +93,7 @@
          &kp F1        &kp F2      &kp F3         &kp F4         &kp F5                    		&kp F6        &kp F7         &kp F8      &kp F9     &kp F10   
          &trans        &kp UP      &trans         &kp F9         &trans                     	&kp PT_PIPE   &kp PT_N7      &kp PT_N8   &kp PT_N9  &mt PT_FSLH PT_STAR     
 &trans   &kp LEFT      &kp DOWN    &kp RIGHT      &caps_word	 &trans                     	&kp PT_EQUAL  &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS     &kp F11
-&trans   &trans        &trans      &trans         &CLCK          &trans                   	    &kp PT_N0     &kp PT_N1      &kp PT_N2   &kp PT_N3  &kp PT_PLUS      &kp F12
+&trans   &trans        &trans      &trans         &kp CLCK          &trans                   	    &kp PT_N0     &kp PT_N1      &kp PT_N2   &kp PT_N3  &kp PT_PLUS      &kp F12
                                                   &trans         &trans   &trans  &kp PT_COMMA  &kp PT_DOT    &trans     
             >;
         };
