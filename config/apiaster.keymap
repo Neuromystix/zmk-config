@@ -64,13 +64,13 @@
 //         |   1 ! |   2 @ |    3 #  |   4 $  |   5 % |              | 6 & |   7 {  |    8 (  |   9 ) |   0 } |       
 //         |   Q ' |   W " |    E €  |   R    |   T ´ |              | Y \ |   U /  |    I [  |   O ] |   P ? |        
 // |ESC TAB| ALT/A | GUI/S | SHIFT/D | CTRL/F |   G ` |              | H = | CTRL/J | SHIFT/K | GUI/L | ALT/Ç | ENTER |
-// |  < >  |   Z ª |   X º |    C    |   V    |   B   |              | N * |   M |  |    , ;  |  . :  |  -  _ |   ~ ^ |
+// |  < >  |   Z ª |   X º |    C    |   V    |   B   |              | N * |   M +  |    , ;  |  . :  |  -  _ |   ~ ^ |
 //                                   | LOWER  | SPACE | BACK |  | DEL|SPACE| RAISE  | 
             bindings = <
 				&mt EXCL N1   &mt PT_AT N2  &mt PT_HASH N3  &mt DLLR N4   &mt PRCNT N5             		 &mt PT_AMPS N6 &mt PT_LBRC N7 &mt PT_LPAR N8    &mt PT_RPAR N9   	&mt PT_RBRC N0
 				&mt PT_APOS Q &mt PT_DQT W  &mt PT_EURO E   &kp R         &mt PT_ACUTE T            	 &mt PT_BSLH Y  &mt PT_FSLH U  &mt PT_LBKT I     &mt PT_RBKT O    	&mt PT_QMARK P
 &mt TAB ESC   	&hl LALT A    &hl LGUI S    &hl LSHFT D 	&hl LCTRL F   &mt PT_GRAVE G              	 &mt PT_EQUAL H &hr RCTRL J    &hr RSHFT K		 &hr RGUI L 		&hr RALT PT_C_CEDILLA  &kp ENTER
-&mt PT_GT PT_LT &mt PT_ORDF Z &mt PT_ORDM X &kp C       	&kp V         &kp B                   		 &mt PT_STAR N  &mt PT_PIPE M  &mt PT_SEMI COMMA &mt PT_COLON DOT  	&mt PT_UNDER PT_MINUS  &mt PT_CARET PT_TILDE
+&mt PT_GT PT_LT &mt PT_ORDF Z &mt PT_ORDM X &kp C       	&kp V         &kp B                   		 &mt PT_STAR N  &mt PT_PLUS M  &mt PT_SEMI COMMA &mt PT_COLON DOT  	&mt PT_UNDER PT_MINUS  &mt PT_CARET PT_TILDE
 															&mo LOWER     &kp SPACE &kp BSPC  &mt DEL BSPC &kp SPACE      &mo RAISE
             >;
         };
@@ -80,14 +80,14 @@
             display-name = "lower";
 // ------------------------------------------------------------------------------------------------------------
 //         |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7  |  F8  |  F9  |  F10  |       
-//         |     |  ^  |      |      |      |                   |  =   |  7   |   8  |   9  |  * /  |      
+//         |     |  ^  |      |      |      |                   |  |   |  7   |   8  |   9  |  * /  |      
 // |       |  <- |  v  |  ->  |      |      |                   |  =   |  4   |   5  |   6  |   -   |  F11  |
 // |       |     |     |      |      |      |                   |  0   |  1   |   2  |   3  |   +   |  F12  |
 //                            |      |      |    |         |  , |  .   |      |              
             bindings = <
          &kp F1        &kp F2      &kp F3         &kp F4         &kp F5                    		&kp F6        &kp F7         &kp F8      &kp F9     &kp F10   
-         &trans        &kp UP      &trans         &trans         &trans                     	&kp PT_EQUAL  &kp PT_N7      &kp PT_N8   &kp PT_N9  &mt PT_FSLH PT_STAR     
-&trans   &kp LEFT      &kp DOWN    &kp RIGHT      &trans   		 &trans                     	&kp PT_EQUAL  &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS     &kp F11
+         &trans        &kp UP      &trans         &trans         &trans                     	&kp PT_PIPE  &kp PT_N7      &kp PT_N8   &kp PT_N9  &mt PT_FSLH PT_STAR     
+&trans   &kp LEFT      &kp DOWN    &kp RIGHT      &kp CLCK 		 &trans                     	&kp PT_EQUAL  &kp PT_N4      &kp PT_N5   &kp PT_N6  &kp PT_MINUS     &kp F11
 &trans   &trans        &trans      &trans         &trans         &trans                   	&kp PT_N0     &kp PT_N1      &kp PT_N2   &kp PT_N3  &kp PT_PLUS      &kp F12
                                                   &trans         &trans   &trans  &kp PT_COMMA  &kp PT_DOT    &trans     
             >;
